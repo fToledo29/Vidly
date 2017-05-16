@@ -8,6 +8,11 @@ namespace VidlyII.Models
 {
     public class Movie
     {
+        public Movie()
+        {
+            DateTime defaultDate = new DateTime();
+            ReleaseDate = defaultDate;
+        }
         public int Id { get; set; }
 
         [Required]
@@ -28,6 +33,7 @@ namespace VidlyII.Models
 
         [Display(Name = "Number in Stock")]
         [Required]
+        [Range(1, 20)]
         public byte NumberInStock { get; set; }
     }
 }
