@@ -212,6 +212,7 @@
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\MovieFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel2.cs" />
     <Compile Include="ViewModels\MoviesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
