@@ -30,7 +30,7 @@ namespace VidlyII.Controllers.API
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
-                return  NotFound()
+                return NotFound();
                 //throw new HttpResponseException(HttpStatusCode.NotFound);
 
             return Ok(Mapper.Map<Customer, CustomerDto>(customer));
@@ -79,11 +79,11 @@ namespace VidlyII.Controllers.API
         {
             var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
 
-                if(customerInDb == null)
-                    throw new HttpResponseException(HttpStatusCode.NotFound);
+            if (customerInDb == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
 
-                _context.Customers.Remove(customerInDb);
-                _context.SaveChanges();
+            _context.Customers.Remove(customerInDb);
+            _context.SaveChanges();
         }
     }
 }
