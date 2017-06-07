@@ -4,23 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Customers</h2>
-@if (!Model.Any())
-{
-    <p>We don't have any customers yet.</p> 
-}
-else
-{
-    <table id="customers" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Customer</th>
-                <th>Membership</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var customer in Model)
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var customer in Model)
             {
                 <tr>
                     <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new {id = customer.Id }, null)</td>
@@ -29,10 +22,19 @@ else
                         <button data-custumer-id="@customer.Id" class="btn-link js-delete">Delete</button>
                     </td>
                 </tr>
-            }
-        </tbody>
-    </table>
+            }*@
+    </tbody>
+</table>
+
+@*<h2>Customers</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p> 
 }
+else
+{
+  
+}*@
 
 
 @section scripts
